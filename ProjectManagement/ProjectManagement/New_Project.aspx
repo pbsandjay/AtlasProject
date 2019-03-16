@@ -6,11 +6,9 @@
 <head runat="server">
     <title></title>
     <link href="Bootstrap/bootstrap.css" rel="stylesheet" />
+    <script src="Scripts/jquery-1.4.4.js"></script>
     <style type="text/css">
-        .auto-style1 {
-            width: 100%;
-        }
-
+        
         .auto-style2 {
             height: 51px;
         }
@@ -24,35 +22,40 @@
     </style>
 </head>
 <body>
-    <div class="container">
+    <div class="container shadow-sm p-3 mb-5 bg-white rounded">
     <form id="form1" runat="server">
-        <div>
+        <center>
             <center>
-                <h1>Add New Project</h1>
+                <h2>New Project</h2>
             </center>
-            <table class="auto-style1">
+            <center>
+            <table>
                 <tr>
                     <td class="auto-style3">Project</td>
                     <td>
                         <asp:TextBox ID="txtbxProject" runat="server"></asp:TextBox>
+                        <asp:RequiredFieldValidator ID="RequiredFieldValidator1" runat="server" ControlToValidate="txtbxProject" ErrorMessage="Project Name is required." ForeColor="#FF3300"></asp:RequiredFieldValidator>
                     </td>
                 </tr>
                 <tr>
                     <td class="auto-style3">Project Number</td>
                     <td>
                         <asp:TextBox ID="txtbxProjectNumber" runat="server"></asp:TextBox>
+                        <asp:RequiredFieldValidator ID="RequiredFieldValidator2" runat="server" ControlToValidate="txtbxProjectNumber" ErrorMessage="Project Number is required." ForeColor="Red"></asp:RequiredFieldValidator>
                     </td>
                 </tr>
                 <tr>
                     <td class="auto-style3">Purpose</td>
                     <td>
                         <asp:TextBox ID="txtbxPurpose" runat="server"></asp:TextBox>
+                        <asp:RequiredFieldValidator ID="RequiredFieldValidator3" runat="server" ControlToValidate="txtbxPurpose" ErrorMessage="Project purpose is required." ForeColor="Red"></asp:RequiredFieldValidator>
                     </td>
                 </tr>
                 <tr>
                     <td class="auto-style3">Project manager</td>
                     <td>
                         <asp:TextBox ID="txtbxProjectManager" runat="server"></asp:TextBox>
+                        <asp:RequiredFieldValidator ID="RequiredFieldValidator4" runat="server" ControlToValidate="txtbxProjectManager" ErrorMessage="Project manager is required." ForeColor="Red"></asp:RequiredFieldValidator>
                     </td>
                 </tr>
                 <tr>
@@ -64,12 +67,14 @@
                             <asp:ListItem>On Hold</asp:ListItem>
                             <asp:ListItem>Done</asp:ListItem>
                         </asp:DropDownList>
+                        <asp:RequiredFieldValidator ID="RequiredFieldValidator5" runat="server" ControlToValidate="DdlStatus" ErrorMessage="Project status is required." ForeColor="Red"></asp:RequiredFieldValidator>
                     </td>
                 </tr>
                 <tr>
                     <td class="auto-style3">Due Date</td>
                     <td>
-                        <asp:TextBox ID="txtbxDueDate" runat="server"></asp:TextBox>
+                        <asp:TextBox ID="txtbxDueDate" runat="server" TextMode="Date"></asp:TextBox>
+                        <asp:RequiredFieldValidator ID="RequiredFieldValidator6" runat="server" ErrorMessage="Due Date is required." ForeColor="Red" ControlToValidate="txtbxDueDate"></asp:RequiredFieldValidator>
                     </td>
                 </tr>
                 <tr>
@@ -77,8 +82,9 @@
                     <td>
                         <asp:DropDownList ID="DdlType" runat="server">
                             <asp:ListItem>Strategic</asp:ListItem>
-                            <asp:ListItem>Non-Strategic </asp:ListItem>
+                            <asp:ListItem>NonStrategic </asp:ListItem>
                         </asp:DropDownList>
+                        <asp:RequiredFieldValidator ID="RequiredFieldValidator7" runat="server" ControlToValidate="DdlType" ErrorMessage="Project type is required." ForeColor="Red"></asp:RequiredFieldValidator>
                     </td>
                 </tr>
                 <tr>
@@ -96,11 +102,9 @@
                     <td>&nbsp;</td>
                 </tr>
             </table>
-        </div>
+        </center>
         <center>
-            <asp:Button ID="btnDashboard" runat="server" Text="Dashboard" OnClick="btnDashboard_Click" />
-            &nbsp;&nbsp;&nbsp;&nbsp;
-            <asp:Button ID="btnView" runat="server" Text="View/Edit" OnClick="btnView_Click" />
+            <a href="Default.aspx">Dashboard</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <a href="View_Edit.aspx">View/Edit</a>
         </center>
     </form>
     </div>

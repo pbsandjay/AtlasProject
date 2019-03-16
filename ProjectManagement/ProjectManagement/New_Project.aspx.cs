@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Configuration;
 using System.Data;
 using System.Data.SqlClient;
+using System.Drawing;
 using System.Linq;
 using System.Web;
 using System.Web.UI;
@@ -51,10 +52,12 @@ namespace ProjectManagement
                     int rows = command.ExecuteNonQuery();
                     if (rows == 1)
                     {
+                        lblError.ForeColor = Color.Green;
                         lblError.Text = "Success.";
                         clearForm();
                     } else
                     {
+                        lblError.ForeColor = Color.Red;
                         lblError.Text = "Error. Plese make sure all fields are filled in and the project number is unique.";
                     }
                 }
@@ -69,7 +72,7 @@ namespace ProjectManagement
 
         protected void btnDashboard_Click(object sender, EventArgs e)
         {
-            Response.Redirect("Main.aspx");
+            Response.Redirect("Default.aspx");
         }
 
         protected void btnView_Click(object sender, EventArgs e)

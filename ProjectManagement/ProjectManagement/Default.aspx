@@ -20,7 +20,7 @@
     </style>
 </head>
 <body>
-    <div class="container">
+    <div class="container shadow-sm p-3 mb-5 bg-white rounded">
     <form id="form1" runat="server">
         <div>
             <center><h1 style="font-size: xx-large; font-weight: bold; font-style: normal; color: #000080; font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;">Atlas Dashboard</h1></center>
@@ -45,7 +45,7 @@
                                 &nbsp;<asp:LinkButton ID="InsertCancelButton" runat="server" CausesValidation="False" CommandName="Cancel" Text="Cancel" />
                             </InsertItemTemplate>
                             <ItemTemplate>
-                                &nbsp;<asp:Label ID="Column1Label" runat="server" Text='<%# Bind("Column1") %>' />
+                                <asp:Label ID="Column1Label" runat="server" Text='<%# Bind("Column1") %>' />
                                 <br />
 
                             </ItemTemplate>
@@ -100,7 +100,7 @@ WHERE Status = 'Started'"></asp:SqlDataSource>
                                 &nbsp;<asp:LinkButton ID="InsertCancelButton" runat="server" CausesValidation="False" CommandName="Cancel" Text="Cancel" />
                             </InsertItemTemplate>
                             <ItemTemplate>
-                                &nbsp;<asp:Label ID="Column1Label" runat="server" Text='<%# Bind("Column1") %>' />
+                                <asp:Label ID="Column1Label" runat="server" Text='<%# Bind("Column1") %>' />
                                 <br />
 
                             </ItemTemplate>
@@ -128,7 +128,7 @@ WHERE Status = 'Not Done'"></asp:SqlDataSource>
                                 &nbsp;<asp:LinkButton ID="InsertCancelButton" runat="server" CausesValidation="False" CommandName="Cancel" Text="Cancel" />
                             </InsertItemTemplate>
                             <ItemTemplate>
-                                &nbsp;<asp:Label ID="Column1Label" runat="server" Text='<%# Bind("Column1") %>' />
+                                <asp:Label ID="Column1Label" runat="server" Text='<%# Bind("Column1") %>' />
                                 <br />
 
                             </ItemTemplate>
@@ -280,7 +280,7 @@ WHERE Done = 'No'"></asp:SqlDataSource>
             </table>
                 </div>
             <br />
-            <center><a href="View_Edit.aspx">View/Edit Projects</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <a href="New_Project.aspx">Add Project</a></center>
+            <center><a href="View_Edit.aspx">View/Edit Projects</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <a href="New_Project.aspx">Add Project</a> </center>
             <br />
         </div>
     </form>
