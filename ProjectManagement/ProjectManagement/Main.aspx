@@ -45,44 +45,16 @@
                                 &nbsp;<asp:LinkButton ID="InsertCancelButton" runat="server" CausesValidation="False" CommandName="Cancel" Text="Cancel" />
                             </InsertItemTemplate>
                             <ItemTemplate>
-                                Column1:
-                                <asp:Label ID="Column1Label" runat="server" Text='<%# Bind("Column1") %>' />
+                                &nbsp;<asp:Label ID="Column1Label" runat="server" Text='<%# Bind("Column1") %>' />
                                 <br />
 
                             </ItemTemplate>
                         </asp:FormView>
                         <asp:SqlDataSource ID="ProjectNumber" runat="server" ConnectionString="<%$ ConnectionStrings:ConnectionString %>" SelectCommand="SELECT COUNT(Project) FROM Projects"></asp:SqlDataSource>
                     </td>
-                    <td>Closest Due Date:</td>
-                    <td>
-                        <asp:FormView ID="DueDate" runat="server" DataSourceID="ClosestDueDate">
-                            <EditItemTemplate>
-                                Column1:
-                                <asp:TextBox ID="Column1TextBox" runat="server" Text='<%# Bind("Column1") %>' />
-                                <br />
-                                <asp:LinkButton ID="UpdateButton" runat="server" CausesValidation="True" CommandName="Update" Text="Update" />
-                                &nbsp;<asp:LinkButton ID="UpdateCancelButton" runat="server" CausesValidation="False" CommandName="Cancel" Text="Cancel" />
-                            </EditItemTemplate>
-                            <InsertItemTemplate>
-                                Column1:
-                                <asp:TextBox ID="Column1TextBox" runat="server" Text='<%# Bind("Column1") %>' />
-                                <br />
-                                <asp:LinkButton ID="InsertButton" runat="server" CausesValidation="True" CommandName="Insert" Text="Insert" />
-                                &nbsp;<asp:LinkButton ID="InsertCancelButton" runat="server" CausesValidation="False" CommandName="Cancel" Text="Cancel" />
-                            </InsertItemTemplate>
-                            <ItemTemplate>
-                                Column1:
-                                <asp:Label ID="Column1Label" runat="server" Text='<%# Bind("Column1") %>' />
-                                <br />
-
-                            </ItemTemplate>
-                        </asp:FormView>
-                        <asp:SqlDataSource ID="ClosestDueDate" runat="server" ConnectionString="<%$ ConnectionStrings:ConnectionString %>" SelectCommand="SELECT MIN([Current_Due_Date] ) FROM [Projects]
-"></asp:SqlDataSource>
-                    </td>
                 </tr>
                 <tr>
-                    <td class="auto-style2">&nbsp;&nbsp;&nbsp;&nbsp; Number Started:&nbsp;</td>
+                    <td class="auto-style2">Number Started:&nbsp;</td>
                     <td>
                         <asp:FormView ID="ProjStarted" runat="server" DataSourceID="ProjectStarted" Height="21px">
                             <EditItemTemplate>
@@ -100,8 +72,7 @@
                                 &nbsp;<asp:LinkButton ID="InsertCancelButton" runat="server" CausesValidation="False" CommandName="Cancel" Text="Cancel" />
                             </InsertItemTemplate>
                             <ItemTemplate>
-                                Column1:
-                                <asp:Label ID="Column1Label" runat="server" Text='<%# Bind("Column1") %>' />
+                                &nbsp;<asp:Label ID="Column1Label" runat="server" Text='<%# Bind("Column1") %>' />
                                 <br />
 
                             </ItemTemplate>
@@ -109,36 +80,9 @@
                         <asp:SqlDataSource ID="ProjectStarted" runat="server" ConnectionString="<%$ ConnectionStrings:ConnectionString %>" SelectCommand="SELECT COUNT(Status) FROM Projects
 WHERE Status = 'Started'"></asp:SqlDataSource>
                     </td>
-                    <td>Number of Strategic Projects:</td>
-                    <td>
-                        <asp:FormView ID="StratProj" runat="server" DataSourceID="StrategicProjects">
-                            <EditItemTemplate>
-                                Column1:
-                                <asp:TextBox ID="Column1TextBox" runat="server" Text='<%# Bind("Column1") %>' />
-                                <br />
-                                <asp:LinkButton ID="UpdateButton" runat="server" CausesValidation="True" CommandName="Update" Text="Update" />
-                                &nbsp;<asp:LinkButton ID="UpdateCancelButton" runat="server" CausesValidation="False" CommandName="Cancel" Text="Cancel" />
-                            </EditItemTemplate>
-                            <InsertItemTemplate>
-                                Column1:
-                                <asp:TextBox ID="Column1TextBox" runat="server" Text='<%# Bind("Column1") %>' />
-                                <br />
-                                <asp:LinkButton ID="InsertButton" runat="server" CausesValidation="True" CommandName="Insert" Text="Insert" />
-                                &nbsp;<asp:LinkButton ID="InsertCancelButton" runat="server" CausesValidation="False" CommandName="Cancel" Text="Cancel" />
-                            </InsertItemTemplate>
-                            <ItemTemplate>
-                                Column1:
-                                <asp:Label ID="Column1Label" runat="server" Text='<%# Bind("Column1") %>' />
-                                <br />
-
-                            </ItemTemplate>
-                        </asp:FormView>
-                        <asp:SqlDataSource ID="StrategicProjects" runat="server" ConnectionString="<%$ ConnectionStrings:ConnectionString %>" SelectCommand="SELECT COUNT(Type) FROM Projects
-WHERE Type = 'Strategic'"></asp:SqlDataSource>
-                    </td>
                 </tr>
                 <tr>
-                    <td class="auto-style3">&nbsp;&nbsp;&nbsp;&nbsp; Number Not Done:&nbsp;</td>
+                    <td class="auto-style3">Number Not Done:&nbsp;</td>
                     <td class="auto-style4">
                         <asp:FormView ID="NumNotDone" runat="server" DataSourceID="ProjectNotDone">
                             <EditItemTemplate>
@@ -156,8 +100,7 @@ WHERE Type = 'Strategic'"></asp:SqlDataSource>
                                 &nbsp;<asp:LinkButton ID="InsertCancelButton" runat="server" CausesValidation="False" CommandName="Cancel" Text="Cancel" />
                             </InsertItemTemplate>
                             <ItemTemplate>
-                                Column1:
-                                <asp:Label ID="Column1Label" runat="server" Text='<%# Bind("Column1") %>' />
+                                &nbsp;<asp:Label ID="Column1Label" runat="server" Text='<%# Bind("Column1") %>' />
                                 <br />
 
                             </ItemTemplate>
@@ -165,36 +108,9 @@ WHERE Type = 'Strategic'"></asp:SqlDataSource>
                         <asp:SqlDataSource ID="ProjectNotDone" runat="server" ConnectionString="<%$ ConnectionStrings:ConnectionString %>" SelectCommand="SELECT COUNT(Status) FROM Projects
 WHERE Status = 'Not Done'"></asp:SqlDataSource>
                     </td>
-                    <td class="auto-style4">Number of Non-Strategic Projects:</td>
-                    <td class="auto-style4">
-                        <asp:FormView ID="NonStratProj" runat="server" DataSourceID="NonStrategicProjects">
-                            <EditItemTemplate>
-                                Column1:
-                                <asp:TextBox ID="Column1TextBox" runat="server" Text='<%# Bind("Column1") %>' />
-                                <br />
-                                <asp:LinkButton ID="UpdateButton" runat="server" CausesValidation="True" CommandName="Update" Text="Update" />
-                                &nbsp;<asp:LinkButton ID="UpdateCancelButton" runat="server" CausesValidation="False" CommandName="Cancel" Text="Cancel" />
-                            </EditItemTemplate>
-                            <InsertItemTemplate>
-                                Column1:
-                                <asp:TextBox ID="Column1TextBox" runat="server" Text='<%# Bind("Column1") %>' />
-                                <br />
-                                <asp:LinkButton ID="InsertButton" runat="server" CausesValidation="True" CommandName="Insert" Text="Insert" />
-                                &nbsp;<asp:LinkButton ID="InsertCancelButton" runat="server" CausesValidation="False" CommandName="Cancel" Text="Cancel" />
-                            </InsertItemTemplate>
-                            <ItemTemplate>
-                                Column1:
-                                <asp:Label ID="Column1Label" runat="server" Text='<%# Bind("Column1") %>' />
-                                <br />
-
-                            </ItemTemplate>
-                        </asp:FormView>
-                        <asp:SqlDataSource ID="NonStrategicProjects" runat="server" ConnectionString="<%$ ConnectionStrings:ConnectionString %>" SelectCommand="SELECT COUNT(Type) FROM Projects
-WHERE Type = 'Non-Strategic'"></asp:SqlDataSource>
-                    </td>
                 </tr>
                 <tr>
-                    <td class="auto-style2">&nbsp;&nbsp;&nbsp;&nbsp; Number On Hold:&nbsp;</td>
+                    <td class="auto-style2">Number On Hold:&nbsp;</td>
                     <td>
                         <asp:FormView ID="NumOnHold" runat="server" DataSourceID="ProjectOnHold">
                             <EditItemTemplate>
@@ -212,8 +128,7 @@ WHERE Type = 'Non-Strategic'"></asp:SqlDataSource>
                                 &nbsp;<asp:LinkButton ID="InsertCancelButton" runat="server" CausesValidation="False" CommandName="Cancel" Text="Cancel" />
                             </InsertItemTemplate>
                             <ItemTemplate>
-                                Column1:
-                                <asp:Label ID="Column1Label" runat="server" Text='<%# Bind("Column1") %>' />
+                                &nbsp;<asp:Label ID="Column1Label" runat="server" Text='<%# Bind("Column1") %>' />
                                 <br />
 
                             </ItemTemplate>
@@ -221,36 +136,9 @@ WHERE Type = 'Non-Strategic'"></asp:SqlDataSource>
                         <asp:SqlDataSource ID="ProjectOnHold" runat="server" ConnectionString="<%$ ConnectionStrings:ConnectionString %>" SelectCommand="SELECT COUNT(Status) FROM Projects
 WHERE Status = 'On Hold'"></asp:SqlDataSource>
                     </td>
-                    <td>Number Not Completed on Time:</td>
-                    <td>
-                        <asp:FormView ID="FormView9" runat="server" DataSourceID="NotDoneOnTime">
-                            <EditItemTemplate>
-                                Column1:
-                                <asp:TextBox ID="Column1TextBox" runat="server" Text='<%# Bind("Column1") %>' />
-                                <br />
-                                <asp:LinkButton ID="UpdateButton" runat="server" CausesValidation="True" CommandName="Update" Text="Update" />
-                                &nbsp;<asp:LinkButton ID="UpdateCancelButton" runat="server" CausesValidation="False" CommandName="Cancel" Text="Cancel" />
-                            </EditItemTemplate>
-                            <InsertItemTemplate>
-                                Column1:
-                                <asp:TextBox ID="Column1TextBox" runat="server" Text='<%# Bind("Column1") %>' />
-                                <br />
-                                <asp:LinkButton ID="InsertButton" runat="server" CausesValidation="True" CommandName="Insert" Text="Insert" />
-                                &nbsp;<asp:LinkButton ID="InsertCancelButton" runat="server" CausesValidation="False" CommandName="Cancel" Text="Cancel" />
-                            </InsertItemTemplate>
-                            <ItemTemplate>
-                                Column1:
-                                <asp:Label ID="Column1Label" runat="server" Text='<%# Bind("Column1") %>' />
-                                <br />
-
-                            </ItemTemplate>
-                        </asp:FormView>
-                        <asp:SqlDataSource ID="NotDoneOnTime" runat="server" ConnectionString="<%$ ConnectionStrings:ConnectionString %>" SelectCommand="SELECT COUNT(Done) FROM Projects
-WHERE Done = 'No'"></asp:SqlDataSource>
-                    </td>
                 </tr>
                 <tr>
-                    <td class="auto-style2">&nbsp;&nbsp;&nbsp;&nbsp; Number Done:</td>
+                    <td class="auto-style2">Number Done:</td>
                     <td>
                         <asp:FormView ID="NumDone" runat="server" DataSourceID="NumberDone">
                             <EditItemTemplate>
@@ -268,8 +156,7 @@ WHERE Done = 'No'"></asp:SqlDataSource>
                                 &nbsp;<asp:LinkButton ID="InsertCancelButton" runat="server" CausesValidation="False" CommandName="Cancel" Text="Cancel" />
                             </InsertItemTemplate>
                             <ItemTemplate>
-                                Column1:
-                                <asp:Label ID="Column1Label" runat="server" Text='<%# Bind("Column1") %>' />
+                                &nbsp;<asp:Label ID="Column1Label" runat="server" Text='<%# Bind("Column1") %>' />
                                 <br />
 
                             </ItemTemplate>
@@ -278,13 +165,125 @@ WHERE Done = 'No'"></asp:SqlDataSource>
 WHERE Status = 'Done'"></asp:SqlDataSource>
                     </td>
                 </tr>
+                <tr>
+                    <td class="auto-style2">Closest Due Date:</td>
+                    <td>
+                        <asp:FormView ID="DueDate" runat="server" DataSourceID="ClosestDueDate">
+                            <EditItemTemplate>
+                                Column1:
+                                <asp:TextBox ID="Column1TextBox" runat="server" Text='<%# Bind("Column1") %>' />
+                                <br />
+                                <asp:LinkButton ID="UpdateButton" runat="server" CausesValidation="True" CommandName="Update" Text="Update" />
+                                &nbsp;<asp:LinkButton ID="UpdateCancelButton" runat="server" CausesValidation="False" CommandName="Cancel" Text="Cancel" />
+                            </EditItemTemplate>
+                            <InsertItemTemplate>
+                                Column1:
+                                <asp:TextBox ID="Column1TextBox" runat="server" Text='<%# Bind("Column1") %>' />
+                                <br />
+                                <asp:LinkButton ID="InsertButton" runat="server" CausesValidation="True" CommandName="Insert" Text="Insert" />
+                                &nbsp;<asp:LinkButton ID="InsertCancelButton" runat="server" CausesValidation="False" CommandName="Cancel" Text="Cancel" />
+                            </InsertItemTemplate>
+                            <ItemTemplate>
+                                &nbsp;<asp:Label ID="Column1Label" runat="server" Text='<%# Bind("Column1") %>' />
+                                <br />
+
+                            </ItemTemplate>
+                        </asp:FormView>
+                        <asp:SqlDataSource ID="ClosestDueDate" runat="server" ConnectionString="<%$ ConnectionStrings:ConnectionString %>" SelectCommand="SELECT MIN([Current_Due_Date] ) FROM [Projects]
+"></asp:SqlDataSource>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="auto-style2">Number of Strategic Projects:</td>
+                    <td>
+                        <asp:FormView ID="StratProj" runat="server" DataSourceID="StrategicProjects">
+                            <EditItemTemplate>
+                                Column1:
+                                <asp:TextBox ID="Column1TextBox" runat="server" Text='<%# Bind("Column1") %>' />
+                                <br />
+                                <asp:LinkButton ID="UpdateButton" runat="server" CausesValidation="True" CommandName="Update" Text="Update" />
+                                &nbsp;<asp:LinkButton ID="UpdateCancelButton" runat="server" CausesValidation="False" CommandName="Cancel" Text="Cancel" />
+                            </EditItemTemplate>
+                            <InsertItemTemplate>
+                                Column1:
+                                <asp:TextBox ID="Column1TextBox" runat="server" Text='<%# Bind("Column1") %>' />
+                                <br />
+                                <asp:LinkButton ID="InsertButton" runat="server" CausesValidation="True" CommandName="Insert" Text="Insert" />
+                                &nbsp;<asp:LinkButton ID="InsertCancelButton" runat="server" CausesValidation="False" CommandName="Cancel" Text="Cancel" />
+                            </InsertItemTemplate>
+                            <ItemTemplate>
+                                &nbsp;<asp:Label ID="Column1Label" runat="server" Text='<%# Bind("Column1") %>' />
+                                <br />
+
+                            </ItemTemplate>
+                        </asp:FormView>
+                        <asp:SqlDataSource ID="StrategicProjects" runat="server" ConnectionString="<%$ ConnectionStrings:ConnectionString %>" SelectCommand="SELECT COUNT(Type) FROM Projects
+WHERE Type = 'Strategic'"></asp:SqlDataSource>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="auto-style2">Number of Non-Strategic Projects:</td>
+                    <td>
+                        <asp:FormView ID="NonStratProj" runat="server" DataSourceID="NonStrategicProjects">
+                            <EditItemTemplate>
+                                Column1:
+                                <asp:TextBox ID="Column1TextBox" runat="server" Text='<%# Bind("Column1") %>' />
+                                <br />
+                                <asp:LinkButton ID="UpdateButton" runat="server" CausesValidation="True" CommandName="Update" Text="Update" />
+                                &nbsp;<asp:LinkButton ID="UpdateCancelButton" runat="server" CausesValidation="False" CommandName="Cancel" Text="Cancel" />
+                            </EditItemTemplate>
+                            <InsertItemTemplate>
+                                Column1:
+                                <asp:TextBox ID="Column1TextBox" runat="server" Text='<%# Bind("Column1") %>' />
+                                <br />
+                                <asp:LinkButton ID="InsertButton" runat="server" CausesValidation="True" CommandName="Insert" Text="Insert" />
+                                &nbsp;<asp:LinkButton ID="InsertCancelButton" runat="server" CausesValidation="False" CommandName="Cancel" Text="Cancel" />
+                            </InsertItemTemplate>
+                            <ItemTemplate>
+                                &nbsp;<asp:Label ID="Column1Label" runat="server" Text='<%# Bind("Column1") %>' />
+                                <br />
+
+                            </ItemTemplate>
+                        </asp:FormView>
+                        <asp:SqlDataSource ID="NonStrategicProjects" runat="server" ConnectionString="<%$ ConnectionStrings:ConnectionString %>" SelectCommand="SELECT COUNT(Type) FROM Projects
+WHERE Type = 'Non-Strategic'"></asp:SqlDataSource>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="auto-style2">Number Not Completed on Time:</td>
+                    <td>
+                        <asp:FormView ID="FormView9" runat="server" DataSourceID="NotDoneOnTime">
+                            <EditItemTemplate>
+                                Column1:
+                                <asp:TextBox ID="Column1TextBox" runat="server" Text='<%# Bind("Column1") %>' />
+                                <br />
+                                <asp:LinkButton ID="UpdateButton" runat="server" CausesValidation="True" CommandName="Update" Text="Update" />
+                                &nbsp;<asp:LinkButton ID="UpdateCancelButton" runat="server" CausesValidation="False" CommandName="Cancel" Text="Cancel" />
+                            </EditItemTemplate>
+                            <InsertItemTemplate>
+                                Column1:
+                                <asp:TextBox ID="Column1TextBox" runat="server" Text='<%# Bind("Column1") %>' />
+                                <br />
+                                <asp:LinkButton ID="InsertButton" runat="server" CausesValidation="True" CommandName="Insert" Text="Insert" />
+                                &nbsp;<asp:LinkButton ID="InsertCancelButton" runat="server" CausesValidation="False" CommandName="Cancel" Text="Cancel" />
+                            </InsertItemTemplate>
+                            <ItemTemplate>
+                                &nbsp;<asp:Label ID="Column1Label" runat="server" Text='<%# Bind("Column1") %>' />
+                                <br />
+
+                            </ItemTemplate>
+                        </asp:FormView>
+                        <asp:SqlDataSource ID="NotDoneOnTime" runat="server" ConnectionString="<%$ ConnectionStrings:ConnectionString %>" SelectCommand="SELECT COUNT(Done) FROM Projects
+WHERE Done = 'No'"></asp:SqlDataSource>
+                    </td>
+                </tr>
             </table>
             <br />
             <br />
             <br />
             <br />
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-            <asp:Button ID="Button1" runat="server" Text="Click to View Project Assignments" />
+            <asp:Button ID="Button1" runat="server" Text="Click to View Project Assignments" OnClick="Button1_Click" />
         </div>
     </form>
 </body>

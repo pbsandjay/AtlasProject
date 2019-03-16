@@ -40,24 +40,6 @@ namespace ProjectManagement {
         protected global::System.Web.UI.WebControls.SqlDataSource ProjectNumber;
         
         /// <summary>
-        /// DueDate control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.FormView DueDate;
-        
-        /// <summary>
-        /// ClosestDueDate control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.SqlDataSource ClosestDueDate;
-        
-        /// <summary>
         /// ProjStarted control.
         /// </summary>
         /// <remarks>
@@ -74,24 +56,6 @@ namespace ProjectManagement {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.SqlDataSource ProjectStarted;
-        
-        /// <summary>
-        /// StratProj control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.FormView StratProj;
-        
-        /// <summary>
-        /// StrategicProjects control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.SqlDataSource StrategicProjects;
         
         /// <summary>
         /// NumNotDone control.
@@ -112,24 +76,6 @@ namespace ProjectManagement {
         protected global::System.Web.UI.WebControls.SqlDataSource ProjectNotDone;
         
         /// <summary>
-        /// NonStratProj control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.FormView NonStratProj;
-        
-        /// <summary>
-        /// NonStrategicProjects control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.SqlDataSource NonStrategicProjects;
-        
-        /// <summary>
         /// NumOnHold control.
         /// </summary>
         /// <remarks>
@@ -148,24 +94,6 @@ namespace ProjectManagement {
         protected global::System.Web.UI.WebControls.SqlDataSource ProjectOnHold;
         
         /// <summary>
-        /// FormView9 control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.FormView FormView9;
-        
-        /// <summary>
-        /// NotDoneOnTime control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.SqlDataSource NotDoneOnTime;
-        
-        /// <summary>
         /// NumDone control.
         /// </summary>
         /// <remarks>
@@ -182,6 +110,78 @@ namespace ProjectManagement {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.SqlDataSource NumberDone;
+        
+        /// <summary>
+        /// DueDate control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.FormView DueDate;
+        
+        /// <summary>
+        /// ClosestDueDate control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.SqlDataSource ClosestDueDate;
+        
+        /// <summary>
+        /// StratProj control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.FormView StratProj;
+        
+        /// <summary>
+        /// StrategicProjects control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.SqlDataSource StrategicProjects;
+        
+        /// <summary>
+        /// NonStratProj control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.FormView NonStratProj;
+        
+        /// <summary>
+        /// NonStrategicProjects control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.SqlDataSource NonStrategicProjects;
+        
+        /// <summary>
+        /// FormView9 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.FormView FormView9;
+        
+        /// <summary>
+        /// NotDoneOnTime control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.SqlDataSource NotDoneOnTime;
         
         /// <summary>
         /// Button1 control.
