@@ -8,7 +8,6 @@
     [Actual_Date]     DATE          NULL,
     [Status]            VARCHAR (20)  NOT NULL,
     [Type]              VARCHAR (20)  NOT NULL,
-    [Done]              VARCHAR (10)  NULL,
-    [Comments] VARCHAR(200) NULL, 
+    [Done_On_Time]              VARCHAR (10)  NULL,
+    [Current_Status] VARCHAR(200) NULL, 
 );
-

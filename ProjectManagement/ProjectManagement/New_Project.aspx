@@ -71,7 +71,9 @@
                     </td>
                 </tr>
                 <tr>
-                    <td>&nbsp;</td>
+                    <td>
+                        <asp:Label ID="lblError" runat="server"></asp:Label>
+                    </td>
                     <td>&nbsp;</td>
                 </tr>
             </table>
