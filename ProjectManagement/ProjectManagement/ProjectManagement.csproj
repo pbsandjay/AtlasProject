@@ -23,6 +23,7 @@
     <UseGlobalApplicationHostFile />
     <NuGetPackageImportStamp>
     </NuGetPackageImportStamp>
+    <Use64BitIISExpress />
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
@@ -65,8 +66,21 @@
     <Reference Include="System.EnterpriseServices" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Bootstrap\bootstrap-grid.css" />
+    <Content Include="Bootstrap\bootstrap-grid.min.css" />
+    <Content Include="Bootstrap\bootstrap-reboot.css" />
+    <Content Include="Bootstrap\bootstrap-reboot.min.css" />
+    <Content Include="Bootstrap\bootstrap.css" />
+    <Content Include="Bootstrap\bootstrap.min.css" />
     <Content Include="Edit.aspx" />
     <Content Include="packages.config" />
+    <Content Include="Bootstrap\.DS_Store" />
+    <Content Include="Bootstrap\bootstrap-grid.css.map" />
+    <Content Include="Bootstrap\bootstrap-grid.min.css.map" />
+    <Content Include="Bootstrap\bootstrap-reboot.css.map" />
+    <Content Include="Bootstrap\bootstrap-reboot.min.css.map" />
+    <Content Include="Bootstrap\bootstrap.css.map" />
+    <Content Include="Bootstrap\bootstrap.min.css.map" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
