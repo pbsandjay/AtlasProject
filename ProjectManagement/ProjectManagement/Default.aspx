@@ -1,10 +1,10 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="Main.aspx.cs" Inherits="ProjectManagement.Main" %>
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="Default.aspx.cs" Inherits="ProjectManagement.Main" %>
 
 <!DOCTYPE html>
 
 <html xmlns="http://www.w3.org/1999/xhtml">
-<head <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous" 
-    <title></title>
+<head>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous" />
     <style type="text/css">
         .auto-style1 {
             width: 87%;
@@ -281,7 +281,7 @@ WHERE Status = 'Done'"></asp:SqlDataSource>
                 </tr>
             </table>
             &nbsp;<p class="auto-style5">
-&nbsp;<asp:Button ID="btnView" runat="server" Text="Click to View Project Assignments" Font-Size="Larger" Height="58px" />
+&nbsp;<asp:Button ID="btnView" runat="server" Text="Click to View Project Assignments" Font-Size="Larger" Height="58px" OnClick="btnView_Click" CssClass="btn-primary" />
             </p>
         </div>
     </form>
