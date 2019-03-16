@@ -13,5 +13,15 @@ namespace ProjectManagement
         {
 
         }
+
+        protected void btnDashboard_Click(object sender, EventArgs e)
+        {
+            Response.Redirect("Main.aspx");
+        }
+
+        protected void btnAdd_Click(object sender, EventArgs e)
+        {
+            Response.Redirect("New_Project.aspx");
+        }
     }
 }

@@ -17,6 +17,17 @@ namespace ProjectManagement
 
         }
 
+        private void clearForm()
+        {
+            txtbxProject.Text = "";
+            txtbxPurpose.Text = "";
+            txtbxProjectManager.Text = "";
+            DdlStatus.Text = "";
+            txtbxDueDate.Text = "";
+            DdlType.Text = "";
+            txtbxProjectNumber.Text = "";
+        }
+
         protected void btnSubmit_Click(object sender, EventArgs e)
         {
             if (IsValid)
@@ -28,9 +39,10 @@ namespace ProjectManagement
                 {
                     command.Connection = con;
                     command.CommandType = CommandType.Text;
-                    command.CommandText = "INSERT INTO Projects (Project, Purpose, Manager, Current_Due_Date, Status, Type)" +
-                        " VALUES (@Project, @Purpose, @Manager, @Current_Due_Date, @Status, @Type)";
+                    command.CommandText = "INSERT INTO Projects (Project, Number, Purpose, Manager, Current_Due_Date, Status, Type)" +
+                        " VALUES (@Project, @Number, @Purpose, @Manager, @Current_Due_Date, @Status, @Type)";
                     command.Parameters.AddWithValue("@Project", txtbxProject.Text);
+                    command.Parameters.AddWithValue("@Number", txtbxProjectNumber.Text);
                     command.Parameters.AddWithValue("@Purpose", txtbxPurpose.Text);
                     command.Parameters.AddWithValue("@Manager", txtbxProjectManager.Text);
                     command.Parameters.AddWithValue("@Current_Due_Date", txtbxDueDate.Text);
@@ -40,6 +52,7 @@ namespace ProjectManagement
                     if (rows == 1)
                     {
                         lblError.Text = "Success.";
+                        clearForm();
                     } else
                     {
                         lblError.Text = "Error.";
@@ -51,12 +64,17 @@ namespace ProjectManagement
 
         protected void btnClear_Click(object sender, EventArgs e)
         {
-            txtbxProject.Text = "";
-            txtbxPurpose.Text = "";
-            txtbxProjectManager.Text = "";
-            DdlStatus.Text = "";
-            txtbxDueDate.Text = "";
-            DdlType.Text = "";
+            clearForm();
+        }
+
+        protected void btnDashboard_Click(object sender, EventArgs e)
+        {
+            Response.Redirect("Main.aspx");
+        }
+
+        protected void btnView_Click(object sender, EventArgs e)
+        {
+            Response.Redirect("View_Edit.aspx");
         }
     }
 }

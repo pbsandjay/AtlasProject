@@ -9,6 +9,7 @@
         .auto-style1 {
             width: 100%;
         }
+
         .auto-style2 {
             height: 51px;
         }
@@ -17,11 +18,18 @@
 <body>
     <form id="form1" runat="server">
         <div>
+            <h1>Add New Project</h1>
             <table class="auto-style1">
                 <tr>
                     <td>Project</td>
                     <td>
                         <asp:TextBox ID="txtbxProject" runat="server"></asp:TextBox>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Project Number</td>
+                    <td>
+                        <asp:TextBox ID="txtbxProjectNumber" runat="server"></asp:TextBox>
                     </td>
                 </tr>
                 <tr>
@@ -66,7 +74,7 @@
                     <td>&nbsp;</td>
                     <td>
                         <asp:Button ID="btnSubmit" runat="server" OnClick="btnSubmit_Click" Text="Submit" />
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                         <asp:Button ID="btnClear" runat="server" OnClick="btnClear_Click" Text="Clear" />
                     </td>
                 </tr>
@@ -78,6 +86,11 @@
                 </tr>
             </table>
         </div>
+        <center>
+            <asp:Button ID="btnDashboard" runat="server" Text="Dashboard" OnClick="btnDashboard_Click" />
+            &nbsp;&nbsp;&nbsp;&nbsp;
+            <asp:Button ID="btnView" runat="server" Text="View/Edit" OnClick="btnView_Click" />
+        </center>
     </form>
 </body>
 </html>
