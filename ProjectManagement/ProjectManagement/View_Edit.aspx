@@ -8,7 +8,7 @@
     </head>
 <body>
     <form id="form1" runat="server">
-        <div>
+        <div class="table-responsive">
         <asp:SqlDataSource ID="EditDataSource" runat="server" ConnectionString="<%$ ConnectionStrings:ConnectionString %>" SelectCommand="SELECT * FROM [Projects]" DeleteCommand="DELETE FROM Projects WHERE (Id = @Id)" UpdateCommand="UPDATE Projects SET Number = @Number, Project = @Project, Purpose = @Purpose, Manager = @Manager, Original_Due_Date = @Original_Due_Date, Current_Due_Date = @Current_Due_Date, Status = @Status, Type = @Type, Done = @Done, Current_Status = @Current_Status, Actual_Date = @Actual_Date WHERE (Id = @Id)">
             <DeleteParameters>
                 <asp:Parameter Name="Id" />
