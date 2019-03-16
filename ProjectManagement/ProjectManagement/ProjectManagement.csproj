@@ -66,8 +66,21 @@
     <Reference Include="System.EnterpriseServices" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Bootstrap\bootstrap-grid.css" />
+    <Content Include="Bootstrap\bootstrap-grid.min.css" />
+    <Content Include="Bootstrap\bootstrap-reboot.css" />
+    <Content Include="Bootstrap\bootstrap-reboot.min.css" />
+    <Content Include="Bootstrap\bootstrap.css" />
+    <Content Include="Bootstrap\bootstrap.min.css" />
     <Content Include="View_Edit.aspx" />
     <Content Include="packages.config" />
+    <Content Include="Bootstrap\.DS_Store" />
+    <Content Include="Bootstrap\bootstrap-grid.css.map" />
+    <Content Include="Bootstrap\bootstrap-grid.min.css.map" />
+    <Content Include="Bootstrap\bootstrap-reboot.css.map" />
+    <Content Include="Bootstrap\bootstrap-reboot.min.css.map" />
+    <Content Include="Bootstrap\bootstrap.css.map" />
+    <Content Include="Bootstrap\bootstrap.min.css.map" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
@@ -80,7 +93,7 @@
     <Content Include="App_Data\Atlas_log.ldf">
       <DependentUpon>Atlas.mdf</DependentUpon>
     </Content>
-    <Content Include="Main.aspx" />
+    <Content Include="Default.aspx" />
     <Content Include="New_Project.aspx" />
     <Content Include="Web.config" />
   </ItemGroup>
@@ -92,12 +105,12 @@
     <Compile Include="View_Edit.aspx.designer.cs">
       <DependentUpon>View_Edit.aspx</DependentUpon>
     </Compile>
-    <Compile Include="Main.aspx.cs">
-      <DependentUpon>Main.aspx</DependentUpon>
+    <Compile Include="Default.aspx.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="Main.aspx.designer.cs">
-      <DependentUpon>Main.aspx</DependentUpon>
+    <Compile Include="Default.aspx.designer.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="New_Project.aspx.cs">

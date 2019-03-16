@@ -14,7 +14,7 @@ namespace ProjectManagement
 
         }
 
-        protected void Button1_Click(object sender, EventArgs e)
+        protected void btnView_Click(object sender, EventArgs e)
         {
             Response.Redirect("View_Edit.aspx");
         }
