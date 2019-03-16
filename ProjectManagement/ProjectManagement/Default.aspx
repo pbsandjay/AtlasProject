@@ -280,7 +280,8 @@ WHERE Done = 'No'"></asp:SqlDataSource>
             </table>
                 </div>
             <br />
-            <center><asp:Button ID="Button1" runat="server" Text="Click to View Project Assignments" /></center>
+            <center><a href="View_Edit.aspx">View/Edit Projects</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <a href="New_Project.aspx">Add Project</a></center>
+            <br />
         </div>
     </form>
         </div>

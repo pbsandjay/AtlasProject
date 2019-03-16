@@ -55,7 +55,7 @@ namespace ProjectManagement
                         clearForm();
                     } else
                     {
-                        lblError.Text = "Error.";
+                        lblError.Text = "Error. Plese make sure all fields are filled in and the project number is unique.";
                     }
                 }
                 con.Close();

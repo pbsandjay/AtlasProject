@@ -4,9 +4,12 @@
 
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head runat="server">
+    <link href="Bootstrap/bootstrap.css" rel="stylesheet" />
     <title></title>
     </head>
 <body>
+    <div class="container">
+    <center><h1>View Projects</h1></center>
     <form id="form1" runat="server">
         <div class="table-responsive">
         <asp:SqlDataSource ID="EditDataSource" runat="server" ConnectionString="<%$ ConnectionStrings:ConnectionString %>" SelectCommand="SELECT * FROM [Projects]" DeleteCommand="DELETE FROM Projects WHERE (Id = @Id)" UpdateCommand="UPDATE Projects SET Number = @Number, Project = @Project, Purpose = @Purpose, Manager = @Manager, Original_Due_Date = @Original_Due_Date, Current_Due_Date = @Current_Due_Date, Status = @Status, Type = @Type, Done = @Done, Current_Status = @Current_Status, Actual_Date = @Actual_Date WHERE (Id = @Id)">
@@ -48,6 +51,7 @@
         </asp:GridView>            
         </div>
     </form>
+        </div>
     <br />
     <center>
         <a href="Main.aspx">Dashboard</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <a href="New_Project.aspx">Add Project</a>
